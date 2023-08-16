@@ -43,8 +43,7 @@ class UserController extends Controller
         foreach ($data as $key => $value) {
             $arr = array();
             $arr['id'] =  $value->id;
-            $arr['lname'] =  $value->name;
-            $arr['fname'] =  $value->name;
+            $arr['name'] =  $value->name;
             $arr['email'] = $value->email;
             $data_array[] = $arr;
         }

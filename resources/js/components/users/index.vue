@@ -40,7 +40,7 @@
                         <div class="row">
                           <div class="col-6  float-left">
                             <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-1"> <strong>{{ e.fname }} {{ e.lname }} </strong></h5>
+                              <h5 class="mb-1"> <strong>{{ e.name }} </strong></h5>
                             </div>
                             <span class="badge badge-secondary"> {{ e.email }}</span>
                           </div>
@@ -78,16 +78,10 @@ export default {
     if (!User.loggedIn()) {
       this.$router.push({ name: '/' })
     }
-    //Notification.success()
-    this.allPatients();
-    //this.me();
+    this.allUsers();
   },
   data() {
     return {
-      file: '',
-      content: [],
-      parsed: false,
-      hasError: false,
       isHidden: true,
       form: {
         searchTerm2: null,
@@ -110,7 +104,7 @@ export default {
     },
   },
   methods: {
-    allPatients() {
+    allUsers() {
       this.isHidden = false
       api.get('users')
         .then(response => {

@@ -78,16 +78,10 @@ export default {
     if (!User.loggedIn()) {
       this.$router.push({ name: '/' })
     }
-    //Notification.success()
-    this.allPatients();
-    //this.me();
+    this.allStores();
   },
   data() {
     return {
-      file: '',
-      content: [],
-      parsed: false,
-      hasError: false,
       isHidden: true,
       form: {
         searchTerm2: null,
@@ -110,7 +104,7 @@ export default {
     },
   },
   methods: {
-    allPatients() {
+    allStores() {
       this.isHidden = false
       api.get('stores')
         .then(response => {
