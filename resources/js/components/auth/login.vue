@@ -73,7 +73,7 @@ export default {
                 .then(response => {
                     this.errors = true;
                     User.responseAfterLogin(response)
-                    location = '/user_list'
+                    location = '/home'
                     Toast.fire({
                         icon: 'success',
                         title: 'Signed-in Successfully'

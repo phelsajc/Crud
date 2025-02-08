@@ -15,12 +15,20 @@ let user_add = require('./components/users/create.vue').default
 let store_list = require('./components/stores/index.vue').default
 let store_add = require('./components/stores/create.vue').default
 
+//Store
+let sub_plans = require('./components/subscription_plans/index.vue').default
+let manage_sub = require('./components/stores/create.vue').default
+
 export const routes = [
     { path: '/', component: login, name: '/' },
     { path: '/register', component: register, name: 'register' },
     { path: '/forget', component: forget, name: 'logout' },
     { path: '/logout', component: logout, name: 'forget' },
-    { path: '/home', component: home, name: 'home' },
+    { path: '/dashboards', component: home, name: 'home' },
+
+    //Users
+    { path: '/subscription-plans', component: sub_plans, name: 'subscription-plans' },
+    { path: '/manage-subscription', component: manage_sub, name: 'manage-subscription' },
 
     //Users
     { path: '/user_list', component: user_list, name: 'user_list' },

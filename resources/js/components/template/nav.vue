@@ -8,7 +8,7 @@
             </a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <router-link to="/all_employee" class="nav-link">Home</router-link>
+            <router-link to="/dashboards" class="nav-link">Home</router-link>
           </li>
         </ul>
       </nav>
